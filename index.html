@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: https:;">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <title>Torneo Interuniversitario de Robótica 2026 | PUCMM</title>
+    <!-- Google Fonts: Space Grotesk & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="#inicio" class="logo">
+                <img src="assets/logo-pucmm.png" alt="PUCMM Logo" class="logo-svg" style="object-fit: contain;">
+                <div class="logo-text">
+                    <span class="logo-title">ROBÓTICA</span>
+                    <span class="logo-subtitle">PUCMM STI</span>
+                </div>
+            </a>
+            
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="#inicio" class="active">Inicio</a></li>
+                    <li><a href="#categorias">Categorías</a></li>
+                    <li><a href="#cronograma">Cronograma</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1jlZICi5bDN8rAPwAq-ShayRkiLsM4HyK?usp=drive_link">Reglas</a></li>
+                    <li><a href="#faqs">Preguntas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+            
+            <div class="lang-switcher" style="margin-right: 15px; display: flex; gap: 10px;">
+                <button onclick="setLang('es')" style="cursor: pointer; color: var(--text-white); font-weight: bold;">ES</button>
+                <button onclick="setLang('en')" style="cursor: pointer; color: var(--text-gray); font-weight: bold;">EN</button>
+            </div>
+            <div class="header-cta">
+                <a href="https://forms.office.com/r/5yRMTbhTvn" target="_blank" class="btn btn-nav">Registrarse</a>
+            </div>
+
+            <button class="nav-toggle" aria-label="Abrir menú" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- SVG Definitions for Gradients -->
+    <svg style="width:0;height:0;position:absolute;" aria-hidden="true">
+        <defs>
+            <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00f0ff" />
+                <stop offset="100%" stop-color="#7000ff" />
+            </linearGradient>
+            <linearGradient id="glow-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#7000ff" />
+                <stop offset="100%" stop-color="#00f0ff" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+        <div class="hero-bg-effects">
+            <div class="glow-orb orb-1"></div>
+            <div class="glow-orb orb-2"></div>
+            <div class="circuit-grid"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                
+                <h1 class="hero-title" style="font-size: 3rem;">Competencia Interuniversitaria de Robótica 2026</h1>
+                <p class="hero-description">Organizado por el Club de Robótica y la Escuela de Ingeniería en Computación y Telecomunicaciones de PUCMM. Estudiantes compiten programando robots móviles TI-RSLK MAX + robots propios para superar pruebas autónomas.</p>
+                <div class="hero-meta">
+                    <div class="meta-item">
+                        <i class="fa-regular fa-calendar"></i>
+                        <span>1 de agosto de 2026</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Campus Santiago, PUCMM</span>
+                    </div>
+                </div>
+                <div class="hero-ctas">
+                    <a href="https://forms.office.com/r/5yRMTbhTvn" target="_blank" class="btn btn-primary">
+                        Inscribe a tu equipo ahora <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#cronograma" class="btn btn-secondary">Ver Cronograma</a>
+                    <a href="https://drive.google.com/drive/folders/1jlZICi5bDN8rAPwAq-ShayRkiLsM4HyK?usp=drive_link" class="btn btn-secondary">Reglas</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="robot-card-holder">
+                    <!-- Premium Glassmorphism Card containing a representation of the TI-RSLK robot -->
+                    <div class="robot-glow-back"></div>
+                    <img src="assets/logo-torneo.png" alt="Torneo Logo" style="width: 100%; max-width: 450px; position: relative; z-index: 2; border-radius: 16px; box-shadow: 0 20px 50px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categorias" class="section categories-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">El Desafío</span>
+                <h2 class="section-title">Categorías del Torneo</h2>
+                <p class="section-subtitle">
+                    Los equipos programarán sus robots para superar retos de navegación autónoma divididos en tres áreas clave.
+                </p>
+            </div>
+
+            <div class="categories-grid">
+                <!-- Card 1: Trayectorias y Obstáculos -->
+                <div class="category-card">
+                    <div class="card-glow"></div>
+                    <div class="category-card-content">
+                        <div class="category-icon">
+                            <i class="fa-solid fa-route"></i>
+                        </div>
+                        <h3 class="category-title">Trayectorias & Obstáculos</h3>
+                        <p class="category-description">
+                            Seguimiento preciso de líneas oscuras mediante matrices de sensores infrarrojos. El robot debe ajustar su velocidad dinámicamente y detenerse de forma segura ante obstáculos físicos sorpresa y paradas de emergencia en pista.
+                        </p>
+                        <div class="category-details">
+                            <span class="detail-pill"><i class="fa-solid fa-microchip"></i> Timers & PWM</span>
+                            <span class="detail-pill"><i class="fa-solid fa-gauge-high"></i> Control GPIO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Laberintos (Maze Solving) -->
+                <div class="category-card">
+                    <div class="card-glow"></div>
+                    <div class="category-card-content">
+                        <div class="category-icon">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <h3 class="category-title">Resolución de Laberintos</h3>
+                        <p class="category-description">
+                            Implementación de algoritmos lógicos en C para mapear y resolver laberintos de paredes y pasillos. Utiliza sensores ópticos y parachoques (bumper switches) para detectar colisiones y escapar en el menor tiempo.
+                        </p>
+                        <div class="category-details">
+                            <span class="detail-pill"><i class="fa-solid fa-brain"></i> Algoritmo de Pared</span>
+                            <span class="detail-pill"><i class="fa-solid fa-wave-square"></i> Muestreo SysTick</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Bono Extra: Brazo Robótico -->
+                <div class="category-card bonus-card">
+                    <div class="card-glow"></div>
+                    <div class="category-card-content">
+                        <div class="bonus-badge">BONUS EXTRA</div>
+                        <div class="category-icon">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <h3 class="category-title">Desafío: Brazo Robótico</h3>
+                        <p class="category-description">
+                            ¡Un reto secreto que se revelará solo el día del torneo! Consiste en acoplar y controlar un brazo robótico sencillo para interactuar con objetos. <strong>No requiere preparación previa ni pruebas clasificatorias</strong>. Es 100% un bonus para acumular puntos extra.
+                        </p>
+                        <div class="category-details">
+                            <span class="detail-pill highlight"><i class="fa-solid fa-star"></i> Challenge Secreto</span>
+                            <span class="detail-pill"><i class="fa-solid fa-puzzle-piece"></i> Adaptabilidad</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline / Program Section -->
+    <section id="cronograma" class="section timeline-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Agenda 2026</span>
+                <h2 class="section-title">Cronograma Oficial</h2>
+                <p class="section-subtitle">
+                    Las fechas clave que definirán el camino del torneo. Prepárate para el entrenamiento técnico y la competencia final.
+                </p>
+            </div>
+
+            <!-- Countdown Timer Component -->
+            <div class="countdown-card">
+                <div class="countdown-glow"></div>
+                <div class="countdown-content">
+                    <h4 class="countdown-heading">PRÓXIMO EVENTO: Entrenamiento Presencial (Día 1)</h4>
+                    <div id="countdown-timer" class="timer-grid">
+                        <div class="timer-unit">
+                            <span id="days" class="timer-num">00</span>
+                            <span class="timer-lbl">Días</span>
+                        </div>
+                        <div class="timer-separator">:</div>
+                        <div class="timer-unit">
+                            <span id="hours" class="timer-num">00</span>
+                            <span class="timer-lbl">Horas</span>
+                        </div>
+                        <div class="timer-separator">:</div>
+                        <div class="timer-unit">
+                            <span id="minutes" class="timer-num">00</span>
+                            <span class="timer-lbl">Minutos</span>
+                        </div>
+                        <div class="timer-separator">:</div>
+                        <div class="timer-unit">
+                            <span id="seconds" class="timer-num">00</span>
+                            <span class="timer-lbl">Segundos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vertical Timeline -->
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item left">
+                    <div class="timeline-dot dot-cyan"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">Sábado, 18 de julio de 2026</span>
+                            <span class="status-pill active-pill">Presencial</span>
+                        </div>
+                        <h3 class="timeline-title">Día 1 – Entrenamiento Práctico</h3>
+                        <p class="timeline-text">
+                            Sesión presencial de 8:30 AM a 12:30 PM en el Edificio de Ingeniería, PUCMM Santiago. Los equipos recibirán el robot TI-RSLK MAX y aprenderán control básico de motores, calibración de sensores de reflectancia y técnicas de giro controlado.
+                        </p>
+                        <div class="timeline-bullets">
+                            <span><i class="fa-solid fa-angle-right"></i> Arquitectura y Pines GPIO</span>
+                            <span><i class="fa-solid fa-angle-right"></i> Motores y Ajuste de PWM</span>
+                            <span><i class="fa-solid fa-angle-right"></i> Mapeo de Sensores Infrarrojos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item right">
+                    <div class="timeline-dot dot-purple"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">Sábado, 25 de julio de 2026</span>
+                            <span class="status-pill virtual-pill">Virtual</span>
+                        </div>
+                        <h3 class="timeline-title">Día 2 – Sesión de Refuerzo</h3>
+                        <p class="timeline-text">
+                            Entrenamiento remoto para afinar algoritmos y resolver consultas técnicas. Se trabajará en el encapsulamiento de funciones avanzadas, control a tiempo real con interrupciones del sistema (SysTick/TimerA) y optimización lógica para la etapa de laberinto.
+                        </p>
+                        <div class="timeline-bullets">
+                            <span><i class="fa-solid fa-angle-right"></i> Temporizadores e Interrupciones</span>
+                            <span><i class="fa-solid fa-angle-right"></i> Estructura lógica en C</span>
+                            <span><i class="fa-solid fa-angle-right"></i> Q&A con Yoel Samuel Castillo Castillo e Isbel Castillo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item left">
+                    <div class="timeline-dot dot-gradient"></div>
+                    <div class="timeline-card highlight-card">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">Sábado, 1 de agosto de 2026</span>
+                            <span class="status-pill final-pill">Competencia</span>
+                        </div>
+                        <h3 class="timeline-title">El Gran Torneo Presencial</h3>
+                        <p class="timeline-text">
+                            Jornada competitiva completa (9:00 AM – 5:00 PM) en PUCMM Santiago. Los equipos se enfrentarán en varias pruebas de complejidad ascendente, acumulando puntos para clasificar al podio final.
+                        </p>
+                        <div class="timeline-bullets">
+                            <span><i class="fa-solid fa-angle-right"></i> Pruebas de Navegación Autónoma</span>
+                            <span><i class="fa-solid fa-angle-right"></i> Revelación de Reto Sorpresa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    
+    <!-- Reglas Section -->
+    <section id="reglas" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Reglamento</span>
+                <h2 class="section-title">Reglas del Evento</h2>
+                <p class="section-subtitle">
+                    Conoce todas las normativas y reglas de las diferentes categorías del torneo.
+                </p>
+            </div>
+            <div style="text-align: center;">
+                <a href="https://drive.google.com/drive/folders/1jlZICi5bDN8rAPwAq-ShayRkiLsM4HyK?usp=drive_link" id="enlace-reglas-oficial" target="_blank" class="btn btn-primary">Ver Documento Oficial de Reglas <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section id="faqs" class="section faqs-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Dudas</span>
+                <h2 class="section-title">Preguntas Frecuentes</h2>
+                <p class="section-subtitle">
+                    Encuentra respuestas rápidas sobre las reglas, requisitos, capacitaciones e inscripciones para el torneo de robótica.
+                </p>
+            </div>
+
+            <div class="faqs-list">
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <button class="faq-toggle">
+                        <span>¿Quiénes pueden participar en el torneo?</span>
+                        <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                    </button>
+                    <div class="faq-collapse">
+                        <div class="faq-body">
+                            El torneo está abierto a estudiantes activos de la Facultad de Ciencias e Ingeniería de la PUCMM. Además, se han extendido invitaciones formales a equipos representantes de universidades invitadas del país: <strong>INTEC, ITLA, PUCMM SD, PUCMM STI e IPISA</strong>.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <button class="faq-toggle">
+                        <span>¿Cómo se conforman los equipos?</span>
+                        <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                    </button>
+                    <div class="faq-collapse">
+                        <div class="faq-body">
+                            Para todas las universidades participantes (con un total de 5 instituciones convocadas), se permite un máximo de <strong>2 equipos por universidad</strong>. Cada equipo debe estar conformado exactamente por <strong>3 estudiantes</strong>. Adicionalmente, cada delegación universitaria debe contar con <strong>1 coach</strong> y <strong>1 representante oficial</strong> de la universidad.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <button class="faq-toggle">
+                        <span>¿Tiene algún costo la inscripción?</span>
+                        <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                    </button>
+                    <div class="faq-collapse">
+                        <div class="faq-body">
+                            No. La participación en el torneo y el programa de entrenamientos previos es <strong>totalmente gratuita</strong> para todos los estudiantes y universidades invitadas, gracias al apoyo de la Escuela de Ingeniería en Computación y Telecomunicaciones.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <button class="faq-toggle">
+                        <span>¿Se necesita experiencia previa en robótica o sistemas embebidos?</span>
+                        <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                    </button>
+                    <div class="faq-collapse">
+                        <div class="faq-body">
+                            Aunque es altamente recomendable tener conocimientos básicos de programación en lenguaje C, el programa de entrenamiento impartido los sábados 18 y 25 de julio capacitará a los estudiantes desde los fundamentos en el manejo de motores, configuración de GPIO y adquisición de sensores.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item">
+                    <button class="faq-toggle">
+                        <span>¿Qué hardware y software utilizaremos para programar el robot?</span>
+                        <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                    </button>
+                    <div class="faq-collapse">
+                        <div class="faq-body">
+                            Utilizaremos los robots móviles educativos <strong>TI-RSLK MAX</strong> de Texas Instruments, basados en el microcontrolador MSP432. El entorno oficial de desarrollo es <strong>Code Composer Studio (CCS)</strong> y el código se escribirá en <strong>C</strong>. Cada equipo inscrito es responsable de traer su computadora portátil para compilar y cargar el código en el robot. Además, los equipos tienen permitido traer sus propios robots, los cuales deben estar estrictamente alineados con las reglas y especificaciones oficiales del torneo.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="faq-item">
+                    <button class="faq-toggle">
+                        <span>¿En qué consiste la prueba del Brazo Robótico (Bono Extra)?</span>
+                        <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                    </button>
+                    <div class="faq-collapse">
+                        <div class="faq-body">
+                            Es un desafío sorpresa diseñado para medir la capacidad de adaptación e ingenio rápido de los equipos. El objetivo exacto de la pista e interacción con el brazo se revelará solo el día del torneo. No forma parte de los entrenamientos previos obligatorios y su ejecución otorga puntos adicionales de bono, sin penalizar si el equipo no lo realiza.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Register Section -->
+    <section id="contacto" class="section contact-section">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <span class="section-tag">Contacto</span>
+                <h2 class="contact-title">¿Listo para participar?</h2>
+                <p class="contact-description">
+                    Si tienes dudas adicionales sobre el reglamento, el cupo de equipos, o si eres representante de una universidad invitada, escríbenos directamente.
+                </p>
+                
+                <div class="contact-details-list">
+                    
+                    <div class="contact-detail-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h4>Teléfono / Oficina</h4>
+                            <p>(809) 580-1962 Ext. 4235</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Sede</h4>
+                            <p>Autopista Duarte Km 1 1/2, Santiago de los Caballeros, Rep. Dom.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-map" style="margin-top: 30px; border-radius: 16px; overflow: hidden; height: 250px; border: 1px solid var(--border-color);">
+                    <iframe src="https://maps.google.com/maps?q=19.441127989212298,-70.68274009778659&z=17&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <div class="contact-details-card" style="background: var(--bg-card); backdrop-filter: blur(12px); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 40px 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                <h3 class="form-title" style="margin-bottom: 25px; font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--text-white);">Contactos Oficiales</h3>
+                
+                <div class="contact-detail-item" style="display: flex; gap: 16px; margin-bottom: 30px; align-items: flex-start;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(0, 123, 255, 0.08); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan); flex-shrink: 0;">
+                        <i class="fa-solid fa-user-gear"></i>
+                    </div>
+                    <div>
+                        <h4 style="font-family: var(--font-heading); font-size: 1.1rem; font-weight: 600; color: var(--text-white); margin-bottom: 4px;">Génesis Almonte Martín</h4>
+                        <p style="font-size: 0.85rem; color: var(--accent-purple); font-weight: 600; margin-bottom: 6px;">Secretaria - Escuela de Ingeniería en Computación y Telecomunicaciones</p>
+                        <p style="font-size: 0.9rem; color: var(--text-gray); margin-bottom: 4px;">Tel.: 1(809)580-1962, ext. 4542</p>
+                        <p style="font-size: 0.9rem; color: var(--text-gray);"><a href="mailto:gealmonte@PUCMM.EDU.DO" style="color: var(--accent-cyan); font-weight: 500;">gealmonte@PUCMM.EDU.DO</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-detail-item" style="display: flex; gap: 16px; align-items: flex-start;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(0, 123, 255, 0.08); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan); flex-shrink: 0;">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <div>
+                        <h4 style="font-family: var(--font-heading); font-size: 1.1rem; font-weight: 600; color: var(--text-white); margin-bottom: 4px;">Yoel Samuel Castillo Castillo</h4>
+                        <p style="font-size: 0.85rem; color: var(--accent-purple); font-weight: 600; margin-bottom: 6px;">Asesor del Club de Robótica</p>
+                        <p style="font-size: 0.9rem; color: var(--text-gray);"><a href="mailto:yscc0002@ce.pucmm.edu.do" style="color: var(--accent-cyan); font-weight: 500;">yscc0002@ce.pucmm.edu.do</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="assets/logo-pucmm.png" alt="PUCMM Logo" class="logo-svg-sm" style="width: 44px; height: 44px; object-fit: contain;">
+                    <span>Club de Robótica PUCMM</span>
+                </div>
+                <p class="footer-desc">
+                    Fomentando la excelencia en ingeniería, robótica móvil y automatización de sistemas embebidos en el campus Santiago.
+                </p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#categorias">Categorías</a></li>
+                    <li><a href="#cronograma">Cronograma</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1jlZICi5bDN8rAPwAq-ShayRkiLsM4HyK?usp=drive_link">Reglas</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container bottom-container">
+                <p>&copy; 2026 Club de Robótica PUCMM. Todos los derechos reservados. Desarrollado por Yoel Samuel Castillo Castillo</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#inicio" class="back-to-top" id="back-to-top" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
