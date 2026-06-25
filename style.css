@@ -1407,6 +1407,24 @@ input, textarea, button {
     color: var(--text-muted);
 }
 
+/* PDF Viewer container styling */
+.pdf-viewer-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    height: 600px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    background: var(--bg-card);
+}
+
+@media (max-width: 768px) {
+    .pdf-viewer-container {
+        height: 400px;
+    }
+}
+
 /* Back to top button */
 .back-to-top {
     position: fixed;
