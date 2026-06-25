@@ -1,3 +1,4 @@
+// Torneo de Robótica 2026 | script.js (Updated: 2026-06-25)
 document.addEventListener('DOMContentLoaded', () => {
 
     /* ==========================================================================
