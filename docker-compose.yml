@@ -1,0 +1,14 @@
+services:
+  web:
+    build: .
+    image: torneo-robotica-2026:latest
+    container_name: torneo-robotica-2026
+    restart: unless-stopped
+    ports:
+      - "${WEB_PORT:-8080}:80"
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:80/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
